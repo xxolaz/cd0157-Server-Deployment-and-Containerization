@@ -87,19 +87,19 @@ Metadata:
           - EksClusterName
     ParameterLabels:
       GitHubUser:
-        default: Username
+        default: xxolaz
       GitHubToken:
         default: Access token
       GitSourceRepo:
-        default: Repository
+        default: cd0157-Server-Deployment-and-Containerization
       GitBranch:
         default: Branch
       CodeBuildDockerImage:
         default: Docker image
       KubectlRoleName:
-        default: kubectl IAM role
+        default: UdacityFlaskDeployCBKubectlRole
       EksClusterName:
-        default: EKS cluster name
+        default: simple-jwt-api
 
 
 Resources:
