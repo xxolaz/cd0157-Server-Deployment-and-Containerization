@@ -20,9 +20,10 @@ phases:
       - echo 'export PATH=$PWD/:$PATH' >> $HOME/.bashrc
       - echo `kubectl version --short --client`
       - python -m pip install --upgrade --force pip
-      - echo "Fixing GPG key for Corretto repository..."
+      - echo "Fixing GPG keys for repositories..."
       - apt-key del A122542AB04F24E3
       - wget -q -O - https://apt.corretto.aws/corretto.key | apt-key add -
+      - wget -q -O - https://dl.google.com/linux/linux_signing_key.pub | apt-key add -
       - apt-get update && apt-get -y install jq  && pip install --upgrade awscli pytest
   pre_build:
     commands:
