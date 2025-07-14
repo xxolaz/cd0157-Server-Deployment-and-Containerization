@@ -16,7 +16,7 @@ Parameters:
 
   GitSourceRepo:
     Type: String
-    Description: GitHub source repository - must contain a Dockerfile and buildspec.yml in the base
+    Description: GitHub source repository
     Default: cd0157-Server-Deployment-and-Containerization
     MinLength: 1
     MaxLength: 100
@@ -40,7 +40,7 @@ Parameters:
 
   GitHubUser:
     Type: String
-    Default: SudKul
+    Default: xxolaz
     Description: GitHub username or organization
     MinLength: 3
     MaxLength: 100
@@ -93,7 +93,7 @@ Metadata:
       GitSourceRepo:
         default: cd0157-Server-Deployment-and-Containerization
       GitBranch:
-        default: Branch
+        default: master
       CodeBuildDockerImage:
         default: Docker image
       KubectlRoleName:
